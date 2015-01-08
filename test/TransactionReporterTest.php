@@ -50,12 +50,12 @@ class TransactionReporterTest extends PHPUnit_Framework_TestCase
         $this->currencyConvertMock->shouldReceive('convert')
             ->once()
             ->with('£100.00')
-            ->andReturn('£100.00');
+            ->andReturn('100.00');
 
         $this->currencyConvertMock->shouldReceive('convert')
             ->once()
             ->with('€200.00')
-            ->andReturn('£150.00'); // the exact amount returned is not important
+            ->andReturn('150.00'); // the exact amount returned is not important
                                     // as it is this class we are testing, not that one
 
         $result = $this->instance->getReportByMerchantId('1');
