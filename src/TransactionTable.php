@@ -19,12 +19,12 @@ class TransactionTable implements TransactionTableInterface
         if ($handle) {
 
             // header
-            $csvArr = fgetcsv($handle);
+            $csvArr = fgetcsv($handle, 0, ';');
 
             $data = [];
 
             while (!feof($handle)) {
-                $csvArr = fgetcsv($handle);
+                $csvArr = fgetcsv($handle, 0, ';');
 
                 if ($csvArr[0] != $id) {
                     continue; // not the right id

@@ -38,7 +38,10 @@ class TransactionReporter
 
         foreach ($transactionData as $row) {
             $rowText = "Transaction at $row[1]: "; // the date
-            $rowText .= $this->currencyConverter->convert($row[2]); // the amount
+            $rowText .= sprintf(
+                '£%.2f',
+                $this->currencyConverter->convert($row[2])
+            ); // the amount
 
             $ret[] = $rowText;
         }
