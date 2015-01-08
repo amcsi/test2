@@ -1,7 +1,7 @@
 Test for an application
 ======
 
-[![Build Status](https://travis-ci.org/amcsi/test2.png?branch=next)](https://travis-ci.org/amcsi/test2)
+[![Build Status](https://travis-ci.org/amcsi/test2.png?branch=master)](https://travis-ci.org/amcsi/test2)
 
 ## Preparation
 
