@@ -1,6 +1,6 @@
 <?php
 
-class EuroToPoundConverterText extends PHPUnit_Framework_TestCase
+class CurrencyConverterText extends PHPUnit_Framework_TestCase
 {
     /**
      * @var Aw\EuroToPoundConverter
@@ -20,7 +20,7 @@ class EuroToPoundConverterText extends PHPUnit_Framework_TestCase
 
         $this->currencyConverterServiceMock = $currencyConverterServiceMock;
 
-        $this->instance = new Aw\EuroToPoundConverter($currencyConverterServiceMock);
+        $this->instance = new Aw\CurrencyConverter($currencyConverterServiceMock);
     }
 
     public function tearDown()
@@ -30,7 +30,7 @@ class EuroToPoundConverterText extends PHPUnit_Framework_TestCase
 
     public function testConvert1()
     {
-        $input = 1; // 1 EUR
+        $input = '€1.00'; // 1 EUR
 
         $expected = 0.78; // 0.78 pounds
 
@@ -46,7 +46,7 @@ class EuroToPoundConverterText extends PHPUnit_Framework_TestCase
 
     public function testConvert100()
     {
-        $input = 100; // 100 EUR
+        $input = '€100.00'; // 100 EUR
 
         $expected = 78; // 78 pounds
 
